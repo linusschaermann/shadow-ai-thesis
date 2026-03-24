@@ -1,0 +1,395 @@
+\documentclass[12pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   Zusaetzliche Pakete  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumerate}  
+\usepackage{fancyhdr}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{palatino}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{acronym}% http://ctan.org/pkg/acronym
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+
+%folgende Zeile auskommentieren für englische Arbeiten
+% \usepackage[ngerman]{babel}
+%folgende Zeile auskommentieren für deutsche Arbeiten
+\usepackage[ngerman, english]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bookmarks]{hyperref}
+\usepackage[justification=centering]{caption}
+\usepackage[style=authoryear,natbib=true,backend=biber,maxbibnames=20]{biblatex}
+\usepackage{csquotes}
+\bibliography{literatur}
+
+\setlength{\parindent}{0em} 
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definition der Kopfzeile %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\setlength{\headheight}{16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Definition des Deckblattes und der Titelseite  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\JMUTitle}[9]{
+
+  \thispagestyle{empty}
+  \vspace*{\stretch{1}}
+  {\parindent0cm
+  \rule{\linewidth}{.7ex}}
+  \begin{flushright}
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\Huge
+    #1\\
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\large
+    #2\\
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\small
+    #3
+  \end{flushright}
+  \rule{\linewidth}{.7ex}
+
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \includegraphics[width=2in]{siegel} \\
+    \vspace*{\stretch{1}}
+    \Large Bachelorarbeit \\
+
+    \vspace*{\stretch{2}}
+   \large Lehrstuhl f\"{u}r Wirtschaftsinformatik\\
+    \large und Systementwicklung\\
+    \large Universität Würzburg\\
+    \vspace*{\stretch{1}}
+    \large Betreuer:  #8 \\[1mm]
+    
+    \vspace*{\stretch{1}}
+    \large W\"urzburg, den #7 \\
+        \vspace*{\stretch{0.25}}
+
+    Bearbeitungszeit: 16.03.2026 - 11.05.2026 % Die Bearbeitungszeit der Seminar-/ Abschlussarbeit ist hier einzutragen.
+
+  \end{center}
+}
+
+\titlespacing*{\section}
+{0pt}{3.5ex plus 1ex minus .2ex}{.2ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{1.5ex plus 1ex minus .2ex}{.2ex plus .2ex}
+\titlespacing*{\subsubsection}
+{0pt}{1.5ex plus 1ex minus .2ex}{.2ex plus .2ex}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Beginn des Dokuments  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+  \JMUTitle
+      {Reconceptualizing Shadow IT: Motivations, Consequences, and Governance in the Age of Shadow AI}        % Titel der Arbeit
+      {Linus Schärmann}                        % Vor- und Nachname des Autors
+      {2910412}
+      
+      {Wirtschaftswissenschaftlichen Fakultät}  % Name der Fakultaet
+      {W"urzburg 2026}                          % Ort und Jahr der Erstellung
+      {11.05.2026}                              % Tag der Abgabe
+      {Prof. Dr. Frédéric Thiesse}               % Name des Erstgutachters
+      {Manuel Zall}                          % Name des Zweitgutachters
+
+  \clearpage
+
+\lhead{}
+\pagenumbering{Roman} 
+    \setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Kurzzusammenfassung   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{Zusammenfassung}
+\section*{Zusammenfassung}
+\addcontentsline{toc}{section}{Zusammenfassung}
+
+Eine Kurzzusammenfassung der Vorgehensweise und der wesentlichen Ergebnisse.
+
+Allgemeine Merkmale
+\begin{itemize}
+    \item Objektivität: Es soll sich jeder persönlichen Wertung enthalten.
+    \item Kürze: Es soll so kurz wie möglich sein.
+    \item Verständlichkeit: Es weist eine klare, nachvollziehbare Sprache und Struktur auf.
+    \item Vollständigkeit: Alle wesentlichen Sachverhalte sollen enthalten sein.
+    \item Genauigkeit: Es soll genau die Inhalte und die Meinung der Originalarbeit wiedergeben.
+\end{itemize}{}
+
+\newpage
+\lhead{Abstract}
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+Obige Zusammenfassung in englischer Sprache.
+
+\newpage
+\lhead{List of Figures} % Bei englischsprachiger Arbeit anzupassen auf: List of Figures
+\addcontentsline{toc}{section}{List of Figures} % Bei englischsprachiger Arbeit anzupassen auf: List of Figures
+\listoffigures
+
+\newpage
+\lhead{List of Tables} % Bei englischsprachiger Arbeit anzupassen auf: List of Tables
+\addcontentsline{toc}{section}{List of Tables} % Bei englischsprachiger Arbeit anzupassen auf: List of Tables
+\listoftables
+\newpage
+
+\setlength{\parskip}{0.5em} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Definition der Abkürzungen  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{List of Abbreviations} % Bei englischsprachiger Arbeit anzupassen auf: List of Abbreviations
+\section*{List of Abbreviations} % Bei englischsprachiger Arbeit anzupassen auf: List of Abbreviations
+\addcontentsline{toc}{section}{List of Abbreviations} % Bei englischsprachiger Arbeit anzupassen auf: List of Abbreviations
+
+\begin{acronym}
+    \acro{SAI}{Shadow AI}
+    \acro{SIT}{Shadow IT}
+    \acro{SLR}{Structured Literature Review}
+\end{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Einstellungen  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}  
+    \setcounter{page}{1}
+\lhead{\nouppercase{\leftmark}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Hauptteil  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction} \label{introduction}
+
+\citet{alaimo2022organizations}
+
+\section{Theoretical Foundations} \label{theoretical-foundations}
+
+\subsection{Shadow IT} \label{shadow-it}
+
+\subsection{Motivational Theories} \label{motivational-theories}
+
+\subsection{From Shadow IT to Shadow AI} \label{from-shadow-it-to-shadow-ai}
+
+
+\section{Methodology} \label{methodology}
+
+The review follows a structured approach based on the guidelines provided by \citet{alaimo2022organizations}. 
+
+\subsection{Purpose} \label{purpose}
+
+Planning - Explicit + Comprehensive + Reproducible
+
+Purpose of this review is to identify and analyze existing literature on the phenomenon of \ac{SIT} and further the development of \ac{SAI} in organizational contexts. The \ac{SLR} aims to synthesize insights on the motivations behind \ac{SIT} and \ac{SAI}, their organizational consequences, and the governance approaches employed to manage these phenomena.
+
+\subsection{Draft Protocol} \label{draft-protocol}
+
+Planning - Explicit + Comprehensive
+
+\subsection{Practical Screening} \label{practical-screening}
+
+Selection - Quantitative + Qualitative
+
+\begin{itemize}
+  \item Content: Shadow IT in Organizations, Shadow AI in Organizations, Motivations for Shadow IT/AI, Organizational Consequences of Shadow IT/AI, Governance of Shadow IT/AI
+  \item Language: English
+  \item Time Frame: 2005 - present
+  \item Publication Type: Journal Articles, Conference Proceedings, Books, Book Chapters/Sections
+  \item Setting: Organizational/professional
+  \item Participants: Professionals, managers, analysts, data scientists
+  \item Artifact: Dashboards, ML interfaces, analytics tools
+  \item Design: Empirical or strong conceptual
+\end{itemize}
+
+\subsection{Literature Search} \label{literature-search}
+
+The literature search was conducted using four search strings across four databases
+(AISeL, EBSCO, IEEE, and Web of Science), employing advanced search with Boolean
+operators (\texttt{OR} and \texttt{AND}) applied to all fields or
+title/abstract/keywords depending on the database.
+
+% ── Search Strings ──────────────────────────────────────────────────────────
+\begin{table}[ht]
+\centering
+\caption{Literature Search Strings}
+\label{tab:search-strings}
+\begin{tabular}{@{} p{0.08\linewidth} p{0.22\linewidth} p{0.63\linewidth} @{}}
+\toprule
+\textbf{String} & \textbf{Purpose} & \textbf{Query} \\
+\midrule
+S1 & Shadow IT Baseline &
+  \texttt{"shadow IT" OR "rogue IT" OR "IT workaround" OR "feral system"} \\
+\addlinespace
+S2 & Shadow AI Baseline &
+  \texttt{"shadow AI" OR "unauthorized AI" OR "unsanctioned AI" OR "BYOAI"} \\
+\addlinespace
+S3.1 & Shadow IT $\times$ Shadow AI &
+  \texttt{("shadow IT" OR "rogue IT" OR "IT workaround" OR "feral system") AND ("shadow AI" OR "unauthorized AI" OR "unsanctioned AI" OR "BYOAI")} \\
+\addlinespace
+S3.2 & Shadow IT $\times$ AI (broader) &
+  \texttt{"shadow IT" AND "artificial intelligence"} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+String~S3.2 was included to capture literature that may not explicitly use the
+term \emph{Shadow AI} but discusses the intersection of Shadow IT and AI
+technologies.
+
+% ── Database Hit Counts ──────────────────────────────────────────────────────
+\begin{table}[ht]
+\centering
+\caption{Database Search Results per String}
+\label{tab:search-results}
+\begin{tabular}{@{} l rrrr r @{}}
+\toprule
+\textbf{String} & \textbf{AISeL} & \textbf{EBSCO} & \textbf{IEEE} & \textbf{WoS} & \textbf{Total} \\
+\midrule
+S1 & 296 & 227 & 39 & 94 & 656 \\
+S2 &   6 &  79 &  9 &  5 &  99 \\
+S3.1 &   4 &   2 &  0 &  0 &   6 \\
+S3.2 &  45 &  18 &  4 &  3 &  70 \\
+\midrule
+\textbf{Total} & \textbf{351} & \textbf{326} & \textbf{52} & \textbf{102} & \textbf{831} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ── Screening Funnel ─────────────────────────────────────────────────────────
+\begin{table}[ht]
+\centering
+\caption{Literature Screening Process}
+\label{tab:screening}
+\begin{tabular}{@{} l r r r @{}}
+\toprule
+\textbf{Stage} & \textbf{Included} & \textbf{Excluded} & \textbf{Remaining} \\
+\midrule
+Records identified                       & --  & --  & 831 \\
+After duplicate removal                  & --  & 124 & 707 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\textit{Practical screening}} \\
+\quad Language (English only)            & --  &  23 & 684 \\
+\quad Publication year (2005--present)   & --  &  30 & 654 \\
+\quad Publication type                   & --  &  15 & 639 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\textit{Content screening}} \\
+\quad Title screening                    & 255 & 384 & 255 \\
+\quad Abstract screening                 & 123 & 132 & 123 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\textit{Full-text review}} \\
+\quad Eligible full texts                & 60  &  41 &  60 \\
+\quad Access requested                   &  -- &  -- &  10 \\
+\quad Not accessible                     &  -- &  12 &  -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the 255 abstracts reviewed in full, 132 were excluded for reasons including
+overly broad scope, lack of organisational context, or wrongly exported reference type (e.g. newspaper declared as journal article). At the full-text
+stage, 60 records were included, 41 were excluded, access was requested for
+10 records, and 12 remained inaccessible.
+
+\subsection{Data Extraction} \label{data-extraction}
+
+Selection - Quantitative + Qualitative
+
+\subsection{Quality Appraisal} \label{quality-appraisal}
+
+Selection - Quantitative + Qualitative + Explicit
+
+\subsection{Study Synthesization} \label{study-synthesization}
+
+Execution -  Quantitative + Qualitative + Quantitative \& Qualitative - Explicit 
+
+
+\subsection{Writing the Review} \label{writing-the-review}
+
+Execution - Explicit + Reproducible
+
+\section{Structured Literature Review Results} \label{slr-results}
+
+\subsection{Overview of Identified Literature} \label{overview-of-identified-literature}
+
+\subsection{Motivational Factors} \label{motivational-factors}
+
+Reports findings separately for SIT and SAI, but does not deeply interpret them.
+
+\subsection{Organizational Consequences} \label{organizational-consequences}
+
+\subsection{Governance Approaches and Countermeasures} \label{governance-approaches-and-countermeasures}
+
+\section{Conceptual Development: Extending Shadow IT to Shadow AI} \label{conceptual-development}
+\subsection{Transferable Motivations} \label{transferable-motivations}
+
+\subsection{Novel Motivations} \label{novel-motivational-dimensions}
+
+\subsection{Behavioral Shift in Knowledge Work} \label{behavioral-shift-in-knowledge-work}
+
+\subsection{Integrated Conceptual Framework} \label{integrated-conceptual-framework}
+
+\section{Comparative Analysis of Shadow IT and Shadow AI} \label{comparative-analysis}
+
+\subsection{Differences in Motivational Drivers} \label{differences-in-motivational-drivers}
+
+\subsection{Differences in Organizational Risk} \label{differences-in-organizational-risk}
+
+\subsection{Differences in Governance Approaches} \label{differences-in-governance-approaches}
+
+\section{Discussion} \label{discussion}
+
+\section{Limitations and Future Research Directions} \label{limitation-and-future-research-directions}
+
+\section{Conclusion} \label{conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Literaturverzeichnis wird 
+%% automatisch eingefügt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\lhead{}
+\printbibliography
+\addcontentsline{toc}{section}{\bibname}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Anhang (optional) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\appendix
+\section{Appendix A} % Bei englischsprachiger Arbeit anzupassen auf: Appendix A
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Versicherung zur Leistungserbringung 
+%% ist auf der Webseite des 
+%% Lehrstuhls zu finden.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
