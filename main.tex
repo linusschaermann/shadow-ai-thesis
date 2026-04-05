@@ -169,6 +169,7 @@ Obige Zusammenfassung in englischer Sprache.
 \addcontentsline{toc}{section}{List of Abbreviations} % Bei englischsprachiger Arbeit anzupassen auf: List of Abbreviations
 
 \begin{acronym}
+    \acro{AI}{Artificial Intelligence}
     \acro{SAI}{Shadow AI}
     \acro{SIT}{Shadow IT}
     \acro{SLR}{Structured Literature Review}
@@ -188,9 +189,20 @@ Obige Zusammenfassung in englischer Sprache.
 
 \section{Introduction} \label{introduction}
 
+Dieser Teil der Arbeit sollte folgende Inhalte haben:
+• Einführung in die Problemstellung
+• Motivation und Herleitung des Themas
+• Aufbau der Arbeit
+Hinweis: Es hat sich als hilfreich erwiesen, die Einleitung mit der Zusammenfassung
+bzw. dem Abstract und der Schlussfolgerung zu vergleichen. Damit stellt man sicher,
+dass diese inhaltlich im Bezug auf Zielsetzung und Motivation übereinstimmen. Der
+Umfang sollte ca. 5 \% der gesamten Arbeit betragen. (= ca. 2 Seiten)
+
 \citet{alaimo2022organizations}
 
 \section{Theoretical Foundations} \label{theoretical-foundations}
+
+In order to establish a comprehensive understanding of \ac{SIT} and its further, \ac{SAI}, this section provides an overview of the theoretical foundations and definitions relevant to these phenomena.
 
 \subsection{Shadow IT} \label{shadow-it}
 
@@ -201,21 +213,32 @@ Obige Zusammenfassung in englischer Sprache.
 
 \section{Methodology} \label{methodology}
 
-The review follows a structured approach based on the guidelines provided by \citet{alaimo2022organizations}. 
+The review follows a structured approach based on the guidelines provided by \citet[887-902]{okoli2015guide} for conducting a \ac{SLR} in the field of information systems research. The methodology is organized into four phases of two steps each: Planning, Selection, Extraction, and Execution \citep[885]{okoli2015guide}.
+
+While the original framework is designed for collaborative research settings involving multiple reviewers, this review was conducted by a single researcher. Therefore, minor adaptions were made to certain steps (e.g., drafting the research protocol, team training) to ensure methodological rigor while maintaining the integrity of the review process. The following sections describe these phases and their implementation in the context of this review.
 
 \subsection{Purpose} \label{purpose}
 
-Planning - Explicit + Comprehensive + Reproducible
-
-Purpose of this review is to identify and analyze existing literature on the phenomenon of \ac{SIT} and further the development of \ac{SAI} in organizational contexts. The \ac{SLR} aims to synthesize insights on the motivations behind \ac{SIT} and \ac{SAI}, their organizational consequences, and the governance approaches employed to manage these phenomena.
+The first step in conducting a \ac{SLR} is to define the purpose of the review, which is to identify and analyze existing literature on the phenomenon of \ac{SIT} and further the development of \ac{SAI} in organizational contexts. The \ac{SLR} aims to synthesize insights on the motivations behind \ac{SIT} and \ac{SAI}, their organizational consequences, and the governance approaches employed to manage these phenomena.
 
 \subsection{Draft Protocol} \label{draft-protocol}
 
-Planning - Explicit + Comprehensive
+The second step includes drafting a research question, a research protocol, and training the team. Since this thesis is conducted by a single person, the protocol and team training steps are not required and will therefore not be carried out further. The research questions guiding this review are as follows:
+
+\textbf{Main Research Question (RQ):}
+How does \ac{SAI} differ from traditional \ac{SIT} in organizations with regard to motivational factors, consequences, and countermeasures?
+
+To better address the research question, it will be broken down into three sub-questions and answered throughout the paper: 
+
+\begin{enumerate}
+  \item Which motivational factors known from \ac{SIT} are transferable to \ac{SAI}, and which additional motivation factors are specific to \ac{SAI}?
+  \item Which organizational consequences of \ac{SAI} differ from those of \ac{SIT}?
+  \item Which countermeasures are discussed for \ac{SIT} and \ac{SAI}, and how do they differ in design and expected effectiveness?
+\end{enumerate}
 
 \subsection{Practical Screening} \label{practical-screening}
 
-Selection - Quantitative + Qualitative
+To make sure only relevant and high-quality literature is included in the review, practical screening criteria are defined to filter the initial search results. 
 
 \begin{itemize}
   \item Content: Shadow IT in Organizations, Shadow AI in Organizations, Motivations for Shadow IT/AI, Organizational Consequences of Shadow IT/AI, Governance of Shadow IT/AI
@@ -223,9 +246,8 @@ Selection - Quantitative + Qualitative
   \item Time Frame: 2005 - present
   \item Publication Type: Journal Articles, Conference Proceedings, Books, Book Chapters/Sections
   \item Setting: Organizational/professional
-  \item Participants: Professionals, managers, analysts, data scientists
-  \item Artifact: Dashboards, ML interfaces, analytics tools
-  \item Design: Empirical or strong conceptual
+  \item Participants: Professionals, managers, analysts, data scientists, IT staff, end-users
+  \item Design: Empirical (quantitative, qualitative, mixed methods), Theoretical/Conceptual, Review
 \end{itemize}
 
 \subsection{Literature Search} \label{literature-search}
@@ -260,7 +282,7 @@ S3.2 & Shadow IT $\times$ AI (broader) &
 \end{table}
 
 String~S3.2 was included to capture literature that may not explicitly use the
-term \emph{Shadow AI} but discusses the intersection of Shadow IT and AI
+term \emph{Shadow AI} but discusses the intersection of \ac{SIT} and \ac{AI}
 technologies.
 
 % ── Database Hit Counts ──────────────────────────────────────────────────────
@@ -281,6 +303,21 @@ S3.2 &  45 &  18 &  4 &  3 &  70 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Of the 255 abstracts reviewed in full, 132 were excluded for reasons including
+overly broad scope, lack of organisational context, or wrongly exported reference type (e.g. newspaper declared as journal article). At the full-text
+stage, 60 records were included, 41 were excluded, access was requested for
+10 records, and 12 remained inaccessible.
+
+\subsection{Data Extraction} \label{data-extraction}
+
+The remaining literature was subjected to a systematic data extraction process, where the literature was coded and sorted based on their key scope in accordance to the research questions. Based on this preliminary coding, relevant information was extracted and collected in a structured format to group similar concepts and themes together. This process was conducted iteratively, with multiple rounds of coding and extraction to ensure that all relevant information was captured and organized effectively for further analysis and synthesis in the subsequent phases of the review.
+
+\subsection{Quality Appraisal} \label{quality-appraisal}
+
+While the practical screening criteria help filter out irrelevant studies before even reading the full text, the review process also involves a quality appraisal to ensure the included studies meet certain standards. Therefore exclusion criteria need to be defined and applied to the extracted studies \citep[884]{okoli2015guide}. 
+
+This \ac{SLR} excluded studies with unsufficient theoretical contribution, unclear methodology or findings, or low prerequisites to adequately answer the research questions. After applying the prior steps and the exclusion criteria, Table~\ref{tab:screening} summarizes the final set of included studies for the review:
 
 % ── Screening Funnel ─────────────────────────────────────────────────────────
 \begin{table}[ht]
@@ -304,30 +341,15 @@ After duplicate removal                  & --  & 124 & 707 \\
 \quad Abstract screening                 & 123 & 132 & 123 \\
 \addlinespace
 \multicolumn{4}{@{}l}{\textit{Full-text review}} \\
-\quad Eligible full texts                & 60  &  41 &  60 \\
-\quad Access requested                   &  -- &  -- &  10 \\
-\quad Not accessible                     &  -- &  12 &  -- \\
+\quad Not accessible                     &  -- &  20 &  -- \\
+\quad Final literature corpus               & 62  &  41 &  62 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Of the 255 abstracts reviewed in full, 132 were excluded for reasons including
-overly broad scope, lack of organisational context, or wrongly exported reference type (e.g. newspaper declared as journal article). At the full-text
-stage, 60 records were included, 41 were excluded, access was requested for
-10 records, and 12 remained inaccessible.
-
-\subsection{Data Extraction} \label{data-extraction}
-
-Selection - Quantitative + Qualitative
-
-\subsection{Quality Appraisal} \label{quality-appraisal}
-
-Selection - Quantitative + Qualitative + Explicit
-
 \subsection{Study Synthesization} \label{study-synthesization}
 
-Execution -  Quantitative + Qualitative + Quantitative \& Qualitative - Explicit 
-
+Study synthesization involves aggregating, summarizing, and interpreting the findings from the included studies to answer the research questions \citep[899]{okoli2015guide}.
 
 \subsection{Writing the Review} \label{writing-the-review}
 
@@ -368,6 +390,17 @@ Reports findings separately for SIT and SAI, but does not deeply interpret them.
 
 \section{Conclusion} \label{conclusion}
 
+In der Schlussfolgerung sollen
+
+• die Themenstellung
+• der gewählte Ansatz
+• die Ergebnisse der Arbeit
+• eine kritische Stellungnahme/Einschätzung
+• nächste Schritte
+
+deutlich werden.
+Hinweis: Die Schlussfolgerung sollte mit der Zusammenfassung bzw. dem Abstract
+und der Einleitung abgeglichen werden. Es sollte immer eine Zusammenfassung der wesentlichen Erkenntnisse der eigenen Arbeit sein, die den Forschungsbeitrag darstellt. Der Umfang der Schlussfolgerung sollte ähnlich wie die Einleitung ca. 5 \% der gesamten Arbeit betragen. (= ca. 2 Seiten)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Literaturverzeichnis wird 
