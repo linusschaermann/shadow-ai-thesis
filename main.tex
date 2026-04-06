@@ -170,6 +170,8 @@ Obige Zusammenfassung in englischer Sprache.
 
 \begin{acronym}
     \acro{AI}{Artificial Intelligence}
+    \acro{BYOD}{Bring Your Own Device}
+    \acro{IT}{Information Technology}
     \acro{SAI}{Shadow AI}
     \acro{SIT}{Shadow IT}
     \acro{SLR}{Structured Literature Review}
@@ -187,7 +189,7 @@ Obige Zusammenfassung in englischer Sprache.
 %%  Hauptteil  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Introduction} \label{introduction}
+\section{Introduction \~ 2p} \label{introduction}
 
 Dieser Teil der Arbeit sollte folgende Inhalte haben:
 • Einführung in die Problemstellung
@@ -200,18 +202,71 @@ Umfang sollte ca. 5 \% der gesamten Arbeit betragen. (= ca. 2 Seiten)
 
 \citet{alaimo2022organizations}
 
-\section{Theoretical Foundations} \label{theoretical-foundations}
+\section{Theoretical Foundations - 6-8 pages} \label{theoretical-foundations}
 
 In order to establish a comprehensive understanding of \ac{SIT} and its further, \ac{SAI}, this section provides an overview of the theoretical foundations and definitions relevant to these phenomena.
 
 \subsection{Shadow IT} \label{shadow-it}
 
+\subsubsection{Concept and Definition}
+
+\ac{SIT} is a multifaceted phenomenon encompassing the use, development, or deployment of \ac{IT} artifacts (e.g., software, hardware, or services) outside the formal control, approval, or awareness of the central \ac{IT} function. For instance, \citet[1]{haag2017shadow} describe it as "hardware, software, or services built, introduced, and/or used for the job without explicit approval or even knowledge of the organization," whereas \citet[1]{kopper2016towards} emphasize autonomous deployment within business departments without IT involvement. Other authors similarly highlight the lack of alignment with IT governance (\citealp[4]{kaess2021towards}; \citealp[4]{rakovic2020shadow}).
+
+Beyond these operational perspectives, \ac{SIT} can be conceptualized as a structural complement to formal IT, consisting of independently developed and used systems, processes, and practices that are not known, supported, or accepted by the official IT department (\citealp[147]{rakovic2020shadow}). More concise definitions further highlight either the user-driven development outside central IT or the absence of approval and monitoring as defining features (\citealp[4]{rakovic2020shadow}; \citealp[2]{magunduni2018revisiting}).
+
+Collectively, these definitions establish \ac{SIT} as a theoretically grounded construct characterized by autonomy, decentralization, and non-sanctioned IT activity, emerging outside formal IT governance.
+
+\subsubsection{Scope}
+
+\ac{SIT} encompasses a wide range of tools and solutions, including spreadsheets, databases, cloud services, mobile devices, and other ad-hoc \ac{IT} solutions (\citealp[2]{rakovic2020shadow}; \citealp[1]{kopper2016towards}). These systems are typically small-scale, developed by individuals or small teams, and tailored to immediate operational needs \citep[2]{rakovic2020shadow}. Their emergence reflects both the accessibility of modern \ac{IT} tools and the flexibility required by employees in dynamic work environments.
+
+\subsubsection{Conceptual Distinctions}
+
+While \ac{SIT} shares similarities with related practices such as workarounds, and \ac{BYOD} programs, it is distinct in being unauthorized and unsanctioned. Workarounds represent behavioral adaptations to organizational constraints, whereas \ac{SIT} manifests these adaptations through technological artifacts. IT consumerization, on the other hand, refers to the broader trend of user-driven technology adoption, providing a context in which \ac{SIT} can emerge (\citealp[2]{rakovic2020shadow}; \citealp[2]{haag2017shadow}).
+
+\subsubsection{Core Characteristics}
+
+\ac{SIT} is not necessarily malicious or risky in intention. Users often deploy it to enhance productivity, overcome system limitations, or facilitate collaboration. Its defining features are low visibility, lack of \ac{IT} support, and a tension between organizational control and individual initiative.
+
 \subsection{Motivational Theories} \label{motivational-theories}
+
+Autonomy
+
+Performance and Productivity
+
+Innovation
+
+Workarounds
+
+Neutralization Theory
 
 \subsection{From Shadow IT to Shadow AI} \label{from-shadow-it-to-shadow-ai}
 
+Definition of Shadow AI
 
-\section{Methodology} \label{methodology}
+How Shadow AI differs from Shadow IT
+
+Unique Characteristics
+
+Examples
+
+Emergence and Growth
+
+Scale and Prevalence
+
+Sociotechnical Nature and Governance Challenges
+
+Knowledge Leakage and Data Risk
+
+Governance Drift and Policy Gaps
+
+Organizational Context
+
+Attack Surface and Technical Risks
+
+Ethical Paradox
+
+\section{Methodology - 2-3 pages} \label{methodology}
 
 The review follows a structured approach based on the guidelines provided by \citet[887-902]{okoli2015guide} for conducting a \ac{SLR} in the field of information systems research. The methodology is organized into four phases of two steps each: Planning, Selection, Extraction, and Execution \citep[885]{okoli2015guide}.
 
@@ -305,9 +360,7 @@ S3.2 &  45 &  18 &  4 &  3 &  70 \\
 \end{table}
 
 Of the 255 abstracts reviewed in full, 132 were excluded for reasons including
-overly broad scope, lack of organisational context, or wrongly exported reference type (e.g. newspaper declared as journal article). At the full-text
-stage, 60 records were included, 41 were excluded, access was requested for
-10 records, and 12 remained inaccessible.
+overly broad scope, lack of organisational context, or wrongly exported reference type (e.g. newspaper declared as journal article). 
 
 \subsection{Data Extraction} \label{data-extraction}
 
@@ -347,15 +400,17 @@ After duplicate removal                  & --  & 124 & 707 \\
 \end{tabular}
 \end{table}
 
+The quality appraisal of the full texts resulted in a final set of 62 studies, which were included in the review and subsequently analyzed and synthesized to answer the research questions.
+
 \subsection{Study Synthesization} \label{study-synthesization}
 
-Study synthesization involves aggregating, summarizing, and interpreting the findings from the included studies to answer the research questions \citep[899]{okoli2015guide}.
+Study synthesization involves aggregating, summarizing, and interpreting the findings from the included studies to answer the research questions \citep[899]{okoli2015guide}. The aggregation utilized the preliminary outline of the review, which was based on the research questions, to group similar concepts and themes, such as definitions, motivations, consequences, and countermeasures of \ac{SIT} and \ac{SAI}.
 
 \subsection{Writing the Review} \label{writing-the-review}
 
-Execution - Explicit + Reproducible
+The final phase of the review process presents the results in detail, so future reviewers can understand and reproduce the process and the findings \citep[901]{okoli2015guide}. Section~\ref{slr-results} presents the results of the \ac{SLR}, organized around the key themes of identified literature, motivational factors, organizational consequences, and governance approaches of \ac{SIT} and \ac{SAI} to summarize existing literature and knowledge about these concepts.
 
-\section{Structured Literature Review Results} \label{slr-results}
+\section{Structured Literature Review Results - 8-10 pages} \label{slr-results}
 
 \subsection{Overview of Identified Literature} \label{overview-of-identified-literature}
 
@@ -367,7 +422,7 @@ Reports findings separately for SIT and SAI, but does not deeply interpret them.
 
 \subsection{Governance Approaches and Countermeasures} \label{governance-approaches-and-countermeasures}
 
-\section{Conceptual Development: Extending Shadow IT to Shadow AI} \label{conceptual-development}
+\section{Conceptual Development: Extending Shadow IT to Shadow AI - 4-5 pages} \label{conceptual-development}
 \subsection{Transferable Motivations} \label{transferable-motivations}
 
 \subsection{Novel Motivations} \label{novel-motivational-dimensions}
@@ -376,7 +431,7 @@ Reports findings separately for SIT and SAI, but does not deeply interpret them.
 
 \subsection{Integrated Conceptual Framework} \label{integrated-conceptual-framework}
 
-\section{Comparative Analysis of Shadow IT and Shadow AI} \label{comparative-analysis}
+\section{Comparative Analysis of Shadow IT and Shadow AI - 3-4 pages} \label{comparative-analysis}
 
 \subsection{Differences in Motivational Drivers} \label{differences-in-motivational-drivers}
 
@@ -384,11 +439,11 @@ Reports findings separately for SIT and SAI, but does not deeply interpret them.
 
 \subsection{Differences in Governance Approaches} \label{differences-in-governance-approaches}
 
-\section{Discussion} \label{discussion}
+\section{Discussion - 3-4 pages} \label{discussion}
 
-\section{Limitations and Future Research Directions} \label{limitation-and-future-research-directions}
+\section{Limitations and Future Research Directions - 1-2 pages} \label{limitation-and-future-research-directions}
 
-\section{Conclusion} \label{conclusion}
+\section{Conclusion \~ 2p} \label{conclusion}
 
 In der Schlussfolgerung sollen
 
