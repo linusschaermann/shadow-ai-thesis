@@ -14,6 +14,11 @@
 \usepackage{acronym}% http://ctan.org/pkg/acronym
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
 
+% For visualization of publication trends
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{subcaption}
+
 %folgende Zeile auskommentieren für englische Arbeiten
 % \usepackage[ngerman]{babel}
 %folgende Zeile auskommentieren für deutsche Arbeiten
@@ -200,8 +205,6 @@ bzw. dem Abstract und der Schlussfolgerung zu vergleichen. Damit stellt man sich
 dass diese inhaltlich im Bezug auf Zielsetzung und Motivation übereinstimmen. Der
 Umfang sollte ca. 5 \% der gesamten Arbeit betragen. (= ca. 2 Seiten)
 
-\citet{alaimo2022organizations}
-
 \section{Theoretical Foundations - 6-8 pages} \label{theoretical-foundations}
 
 In order to establish a comprehensive understanding of \ac{SIT} and its further, \ac{SAI}, this section provides an overview of the theoretical foundations and definitions relevant to these phenomena.
@@ -294,24 +297,13 @@ To better address the research question, it will be broken down into three sub-q
 
 \subsection{Practical Screening} \label{practical-screening}
 
-To make sure only relevant and high-quality literature is included in the review, practical screening criteria are defined to filter the initial search results. 
+To make sure only relevant and high-quality literature is included in the review, practical screening criteria are defined to filter the large number of initial search results before reviewing them in detail.
 
-\begin{itemize}
-  \item Content: Shadow IT in Organizations, Shadow AI in Organizations, Motivations for Shadow IT/AI, Organizational Consequences of Shadow IT/AI, Governance of Shadow IT/AI
-  \item Language: English
-  \item Time Frame: 2005 - present
-  \item Publication Type: Journal Articles, Conference Proceedings, Books, Book Chapters/Sections
-  \item Setting: Organizational/professional
-  \item Participants: Professionals, managers, analysts, data scientists, IT staff, end-users
-  \item Design: Empirical (quantitative, qualitative, mixed methods), Theoretical/Conceptual, Review
-\end{itemize}
+For this review, only journal articles, conference proceedings, and book chapters/sections published in English between 2005 and 2026 with a focus on \ac{SIT}/\ac{SAI} in organizational or professional settings were included. The research design of the included studies could be empirical (quantitative, qualitative, or mixed methods), theoretical, conceptual, or review-based, as long as they provide insights relevant to the research questions. The participants in the included studies could be professionals, managers, employees in various roles (e.g., analysts, data scientists, IT staff), or end-users as long as they have a close connection to the organizational context of \ac{SIT} and \ac{SAI}.
 
 \subsection{Literature Search} \label{literature-search}
 
-The literature search was conducted using four search strings across four databases
-(AISeL, EBSCO, IEEE, and Web of Science), employing advanced search with Boolean
-operators (\texttt{OR} and \texttt{AND}) applied to all fields or
-title/abstract/keywords depending on the database.
+The literature search was conducted using four search strings across four databases (AISeL, EBSCO, IEEE, and Web of Science), employing advanced search with Boolean operators (\texttt{OR} and \texttt{AND}) applied to all fields or title/abstract/keywords depending on the database. The search strings were designed to capture literature on both concepts, as well as their intersection, to ensure a broad and comprehensive coverage of relevant studies. The search strings and their purposes are summarized in Table~\ref{tab:search-strings}.
 
 % ── Search Strings ──────────────────────────────────────────────────────────
 \begin{table}[ht]
@@ -337,9 +329,34 @@ S3.2 & Shadow IT $\times$ AI (broader) &
 \end{tabular}
 \end{table}
 
-String~S3.2 was included to capture literature that may not explicitly use the
-term \emph{Shadow AI} but discusses the intersection of \ac{SIT} and \ac{AI}
+String~S3.2 was included to capture literature not explicitly using the
+term \emph{Shadow AI} but discussing the intersection of \ac{SIT} and \ac{AI}
 technologies.
+
+Additionally, the search was extended by backward and forward searching of the reference list of the included studies to identify any relevant literature that may have been missed in the initial database search.
+
+\subsection{Data Extraction} \label{data-extraction}
+
+The remaining literature was subjected to a systematic data extraction process, where the literature was coded and sorted based on their key scope in accordance to the research questions. Based on this preliminary coding, relevant information was extracted and collected in a structured format to group similar concepts and themes together. This process was conducted iteratively, with multiple rounds of coding and extraction to ensure that all relevant information was captured and organized effectively for further analysis and synthesis in the subsequent phases of the review.
+
+\subsection{Quality Appraisal} \label{quality-appraisal}
+
+While the practical screening criteria help filter out irrelevant studies before even reading the full text, the review process also involves a quality appraisal to ensure the included studies meet certain standards. Therefore exclusion criteria need to be defined and applied to the extracted studies \citep[884]{okoli2015guide}. 
+
+This \ac{SLR} excluded studies with unsufficient theoretical contribution, unclear methodology or findings, or low prerequisites to adequately answer the research questions.
+
+\subsection{Study Synthesization} \label{study-synthesization}
+
+Study synthesization involves aggregating, summarizing, and interpreting the findings from the included studies to answer the research questions \citep[899]{okoli2015guide}. The aggregation utilized the preliminary outline of the review, which was based on the research questions, to group similar concepts and themes, such as definitions, motivations, consequences, and countermeasures of \ac{SIT} and \ac{SAI}. \footnote{To support the aggregation and summarization of relevant data, generative AI tools such as ChatGPT (OpenAI, GPT-5.3, April 2026 version) and Claude (Antrophic, Sonnet 4.5, April 2026 version) were used. All outputs were critically reviewed and revised by the author who assumes full responsibility for the final content.}
+
+
+\subsection{Writing the Review} \label{writing-the-review}
+
+The final phase of the review process presents the results in detail, so future reviewers can understand and reproduce the process and the findings \citep[901]{okoli2015guide}. Section~\ref{slr-results} presents the results of the \ac{SLR}, organized around the key themes of identified literature, motivational factors, organizational consequences, and governance approaches of \ac{SIT} and \ac{SAI} to summarize existing literature and knowledge about these concepts.
+
+\section{Structured Literature Review Results - 8-10 pages} \label{slr-results}
+
+\subsection{Overview of Identified Literature} \label{overview-of-identified-literature}
 
 % ── Database Hit Counts ──────────────────────────────────────────────────────
 \begin{table}[ht]
@@ -360,18 +377,7 @@ S3.2 &  45 &  18 &  4 &  3 &  70 \\
 \end{tabular}
 \end{table}
 
-Of the 255 abstracts reviewed in full, 132 were excluded for reasons including
-overly broad scope, lack of organisational context, or wrongly exported reference type (e.g. newspaper declared as journal article). 
-
-\subsection{Data Extraction} \label{data-extraction}
-
-The remaining literature was subjected to a systematic data extraction process, where the literature was coded and sorted based on their key scope in accordance to the research questions. Based on this preliminary coding, relevant information was extracted and collected in a structured format to group similar concepts and themes together. This process was conducted iteratively, with multiple rounds of coding and extraction to ensure that all relevant information was captured and organized effectively for further analysis and synthesis in the subsequent phases of the review.
-
-\subsection{Quality Appraisal} \label{quality-appraisal}
-
-While the practical screening criteria help filter out irrelevant studies before even reading the full text, the review process also involves a quality appraisal to ensure the included studies meet certain standards. Therefore exclusion criteria need to be defined and applied to the extracted studies \citep[884]{okoli2015guide}. 
-
-This \ac{SLR} excluded studies with unsufficient theoretical contribution, unclear methodology or findings, or low prerequisites to adequately answer the research questions. After applying the prior steps and the exclusion criteria, Table~\ref{tab:screening} summarizes the final set of included studies for the review:
+After applying the prior steps and the exclusion criteria, Table~\ref{tab:screening} summarizes the final set of included studies for the review:
 
 % ── Screening Funnel ─────────────────────────────────────────────────────────
 \begin{table}[ht]
@@ -386,35 +392,75 @@ Records identified                       & --  & --  & 831 \\
 After duplicate removal                  & --  & 124 & 707 \\
 \addlinespace
 \multicolumn{4}{@{}l}{\textit{Practical screening}} \\
-\quad Language (English only)            & --  &  23 & 684 \\
-\quad Publication year (2005--present)   & --  &  30 & 654 \\
-\quad Publication type                   & --  &  15 & 639 \\
+\quad Language (English only)            & --  &  24 & 683 \\
+\quad Publication year (2005--present)   & --  &  30 & 653 \\
+\quad Publication type                   & --  &  15 & 638 \\
 \addlinespace
 \multicolumn{4}{@{}l}{\textit{Content screening}} \\
-\quad Title screening                    & 255 & 384 & 255 \\
-\quad Abstract screening                 & 123 & 132 & 123 \\
+\quad Title screening                    & 254 & 384 & 254 \\
+\quad Abstract screening                 & 122 & 132 & 122 \\
 \addlinespace
 \multicolumn{4}{@{}l}{\textit{Full-text review}} \\
-\quad Not accessible                     &  -- &  20 &  -- \\
-\quad Final literature corpus               & 62  &  41 &  62 \\
+\quad Not accessible                     &  -- &  19 &  103 \\
+\quad Full-text screening             & 62  &  41 &  62 \\
+\quad Forward searching                      &  3 &  -- &  65 \\
+\quad Backward searching                     &  4 &  -- &  69 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The quality appraisal of the full texts resulted in a final set of 62 studies, which were included in the review and subsequently analyzed and synthesized to answer the research questions.
+The quality appraisal of the full texts resulted in a final set of 69 studies, which were included in the review and subsequently analyzed and synthesized to answer the research questions.
 
-\subsection{Study Synthesization} \label{study-synthesization}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.85\textwidth,
+    height=6cm,
+    xlabel={Year},
+    ylabel={Publications},
+    ymin=0,
+    grid=major,
+    xtick={2012,2014,...,2026}, % reduce tick density
+    xticklabel style={rotate=45, anchor=east, font=\scriptsize},
+    label style={font=\small},
+    tick label style={font=\scriptsize},
+    legend style={
+        font=\scriptsize,
+        at={(0.5,1.05)},
+        anchor=south,
+        legend columns=2
+    }
+]
 
-Study synthesization involves aggregating, summarizing, and interpreting the findings from the included studies to answer the research questions \citep[899]{okoli2015guide}. The aggregation utilized the preliminary outline of the review, which was based on the research questions, to group similar concepts and themes, such as definitions, motivations, consequences, and countermeasures of \ac{SIT} and \ac{SAI}. \footnote{To support the aggregation and summarization of relevant data, generative AI tools such as ChatGPT (OpenAI, GPT-5.3, April 2026 version) and Claude (Antrophic, Sonnet 4.5, April 2026 version) were used. All outputs were critically reviewed and revised by the author who assumes full responsibility for the final content.}
+% Shadow IT
+\addplot[
+    black,
+    mark=*,
+    thick
+] coordinates {
+(2012,4)(2013,0)(2014,6)(2015,1)(2016,6)(2017,5)(2018,4)
+(2019,10)(2020,3)(2021,7)(2022,1)(2023,4)(2024,4)(2025,1)(2026,0)
+};
+\addlegendentry{Shadow IT}
 
+% Shadow AI
+\addplot[
+    black,
+    dashed,
+    mark=square*,
+    thick
+] coordinates {
+(2012,0)(2013,0)(2014,0)(2015,0)(2016,0)(2017,0)(2018,0)
+(2019,0)(2020,0)(2021,1)(2022,0)(2023,0)(2024,3)(2025,8)(2026,1)
+};
+\addlegendentry{Shadow AI}
 
-\subsection{Writing the Review} \label{writing-the-review}
-
-The final phase of the review process presents the results in detail, so future reviewers can understand and reproduce the process and the findings \citep[901]{okoli2015guide}. Section~\ref{slr-results} presents the results of the \ac{SLR}, organized around the key themes of identified literature, motivational factors, organizational consequences, and governance approaches of \ac{SIT} and \ac{SAI} to summarize existing literature and knowledge about these concepts.
-
-\section{Structured Literature Review Results - 8-10 pages} \label{slr-results}
-
-\subsection{Overview of Identified Literature} \label{overview-of-identified-literature}
+\end{axis}
+\end{tikzpicture}
+\caption{Development of publications on Shadow IT and Shadow AI over time}
+\label{fig:shadow_it_ai_combined}
+\end{figure}
 
 \subsection{Motivational Factors} \label{motivational-factors}
 
