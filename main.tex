@@ -303,7 +303,7 @@ For this review, only journal articles, conference proceedings, and book chapter
 
 \subsection{Literature Search} \label{literature-search}
 
-The literature search was conducted using four search strings across four databases (AISeL, EBSCO, IEEE, and Web of Science), employing advanced search with Boolean operators (\texttt{OR} and \texttt{AND}) applied to all fields or title/abstract/keywords depending on the database. The search strings were designed to capture literature on both concepts, as well as their intersection, to ensure a broad and comprehensive coverage of relevant studies. The search strings and their purposes are summarized in Table~\ref{tab:search-strings}.
+The literature search was conducted using four search strings across four databases (AISeL, EBSCO, IEEE, and Web of Science), employing advanced search with Boolean operators (\texttt{OR} and \texttt{AND}) applied to all fields or title/abstract/keywords depending on the database. The search strings were designed to capture literature on both concepts, as well as their intersection, to ensure a broad and comprehensive coverage of relevant studies. The search strings and their purposes are summarized in Table~\ref{tab:search-strings}. The search process was completed on March 15, 2026, and therefore includes only literature published up to that date.
 
 % ── Search Strings ──────────────────────────────────────────────────────────
 \begin{table}[ht]
@@ -341,7 +341,7 @@ The remaining literature was subjected to a systematic data extraction process, 
 
 \subsection{Quality Appraisal} \label{quality-appraisal}
 
-While the practical screening criteria help filter out irrelevant studies before even reading the full text, the review process also involves a quality appraisal to ensure the included studies meet certain standards. Therefore exclusion criteria need to be defined and applied to the extracted studies \citep[884]{okoli2015guide}. 
+While the practical screening criteria help filter out irrelevant studies before even reading the full-text, the review process also involves a quality appraisal to ensure the included studies meet certain standards. Therefore exclusion criteria need to be defined and applied to the extracted studies \citep[884]{okoli2015guide}. 
 
 This \ac{SLR} excluded studies with unsufficient theoretical contribution, unclear methodology or findings, or low prerequisites to adequately answer the research questions.
 
@@ -357,6 +357,8 @@ The final phase of the review process presents the results in detail, so future 
 \section{Structured Literature Review Results - 8-10 pages} \label{slr-results}
 
 \subsection{Overview of Identified Literature} \label{overview-of-identified-literature}
+
+In total, 831 records from the four databases were identified. Table~\ref{tab:search-results} provides a breakdown of the search results per string and database, illustrating the initial scope of literature available for review.
 
 % ── Database Hit Counts ──────────────────────────────────────────────────────
 \begin{table}[ht]
@@ -377,10 +379,12 @@ S3.2 &  45 &  18 &  4 &  3 &  70 \\
 \end{tabular}
 \end{table}
 
-After applying the prior steps and the exclusion criteria, Table~\ref{tab:screening} summarizes the final set of included studies for the review:
+Following the removal of duplicates (124 records) and the application of the practical screening criteria (69 records), 638 records remained for content screening. Reviewing titles and abstracts led to the exclusion of 516 records, leaving 122 records for full-text review and quality appraisal. The full-text review resulted in the exclusion of 41 studies, with 19 additionally excluded due to inaccessibility. The forward and backward searching of references added seven more studies, leading to a final set of 69 included studies for this review.
+
+Table~\ref{tab:screening} provides a detailed overview of the whole \ac{SLR} process, including the number of records included, excluded, and remaining at each stage of the screening funnel.
 
 % ── Screening Funnel ─────────────────────────────────────────────────────────
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering
 \caption{Literature Screening Process}
 \label{tab:screening}
@@ -409,14 +413,16 @@ After duplicate removal                  & --  & 124 & 707 \\
 \end{tabular}
 \end{table}
 
-The quality appraisal of the full texts resulted in a final set of 69 studies, which were included in the review and subsequently analyzed and synthesized to answer the research questions.
+Figure~\ref{fig:shadow_it_ai_combined} illustrates the temporal distribution of the included studies by publication year, differentiating between \ac{SIT} and \ac{SAI}. The results show that \ac{SIT} has been an established research stream since atleast 2012, with continuous presence and fluctuating publication activity over time, peaking in 2019.
+In contrast, publication on \ac{SAI} only begin to emerge in 2021 and remain limited in number. A noticeable increase can be observed from 2024 onwards, with a peak in 2025. Despite this recent growth, the overall volume of \ac{SAI} remains substantially lower compared to \ac{SIT}.
+Overall, the figure highlights that while \ac{SIT} represents a mature and consistently researched phenomenon, \ac{SAI} is a comparatively developing area of research.
 
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.85\textwidth,
-    height=6cm,
+    width=0.75\textwidth,
+    height=5cm,
     xlabel={Year},
     ylabel={Publications},
     ymin=0,
@@ -458,29 +464,39 @@ The quality appraisal of the full texts resulted in a final set of 69 studies, w
 
 \end{axis}
 \end{tikzpicture}
-\caption{Development of publications on Shadow IT and Shadow AI over time}
+
+\caption{Temporal distribution of included studies on Shadow IT and Shadow AI (2012–2026)}
 \label{fig:shadow_it_ai_combined}
 \end{figure}
 
 \subsection{Motivational Factors} \label{motivational-factors}
 
+One of the motivations
+
 \subsubsection{Individual Motivations}
 
 User Experience and Ease of Use
+
 Percieved Usefulness
+
 Performance Expectancy
+
 Effort Expectancy
 
 \subsubsection{Social Motivations}
 
 Social Influence
+
 Social Presence
+
 Subjective Norms
 
 \subsubsection{Organizational Motivations}
 
 IT Department Limitations
+
 System Inadequacies and Business-IT Misalignment
+
 Facilitating Conditions
 
 \subsubsection{Technological Motivations}
@@ -490,6 +506,7 @@ Consumer IT Capabilities and Relative Advantage
 \subsubsection{Work-Related Stressors}
 
 Work Overload
+
 Work Pressure
 
 \subsection{Organizational Consequences} \label{organizational-consequences}
@@ -497,17 +514,25 @@ Work Pressure
 \subsubsection{Positive Consequences}
 
 Innovation Benefits
+
 Individual Performance Improvement
+
 Knowledge Sharing Enhancement
+
 Productivity Gains
+
 Agility and Flexibility
 
 \subsubsection{Negative Consequences}
 
 Security Risks and Data Breaches
+
 Compliance Violations
+
 Data Leakage
+
 Governance Challenges and Integration Issues
+
 Lack of Awareness
 
 \subsection{Governance Approaches and Countermeasures} \label{governance-approaches-and-countermeasures}
@@ -515,23 +540,29 @@ Lack of Awareness
 \subsubsection{IT Governance Strategies}
 
 Control-Oriented Approach
+
 User-Oriented Approach
+
 Middle Ground/Balanced Approach
 
 \subsubsection{Policy Approaches}
 
 Communication and Awareness
+
 Understanding and Procedural Justice
 
 \subsubsection{Management Strategies}
 
 Balancing User Needs and Security
+
 Manager and Leadership Influence
 
 \subsubsection{Risk Mitigation \& Compliance Mechanisms}
 
 Deterrence and Sanctions
+
 Personal and ORganizational Ethics
+
 Cultural Factors
 
 \section{Conceptual Development: Extending Shadow IT to Shadow AI - 4-5 pages} \label{conceptual-development}
@@ -539,44 +570,70 @@ Cultural Factors
 \subsection{Transferable Motivations} \label{transferable-motivations}
 
 Performance Improvement/Performance Expectancy
+
 Ease of Use/Effort Expectancy/User-Friendliness
+
 Autonomy Needs/Independence/Self-Determination
+
 Productivity Gains/Efficiency
+
 Social Influence/Peer Influence/Normative Beliefs
+
 Workaround Behavior/Overcoming Constraints
+
 System Limitations/IT Department Limitations
 
 \subsection{Novel Motivations} \label{novel-motivational-dimensions}
 
 AI Capabilities (NLP, Content Generation)
+
 Accessibility of AI Tools
+
 Generative Capabilities
+
 Advanced Analytical Features
+
 Speed of AI Responses/Rapid Deployment
 Conversational Interfaces/Natural Language Interaction
+
 AI as Knowledge Assistant/Cognitive Support
+
 Unique Capabilites
 
 \subsection{Behavioral Shift in Knowledge Work} \label{behavioral-shift-in-knowledge-work}
 
 Changes in Knowledge Work Patterns/Knowledge Work Transformation
+
 Shift in Employee-Technology Interaction/Human-AI Interaction
+
 AI as Cognitive Assistant/Thinking Partner
+
 Transformation of Decision-Making Processes
+
 Changes in Information Processing/Cognitive Processes
+
 Impact on Professional Expertise/Expert Knowledge
+
 Changes in Work Practices/Work Routines
 
 \subsection{Integrated Conceptual Framework} \label{integrated-conceptual-framework}
 
 Conceptual models connecting Motivations -> Behaviors -> Outcomes
+
 Theoretical Frameworks for understanding Shadow IT/AI
+
 Relationships between Constructs
+
 Mediating Factors/Mediation Relationships
+
 Moderating Factors/Moderation Effects
+
 Causal Pathways/Causal Chains
+
 Integration of Mulitple Theories
+
 Organizational-Individual Factor Integration
+
 Sociotechnical Integration (Shadow AI)
 
 \section{Comparative Analysis of Shadow IT and Shadow AI - 3-4 pages} \label{comparative-analysis}
