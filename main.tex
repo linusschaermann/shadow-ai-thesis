@@ -181,6 +181,7 @@ Obige Zusammenfassung in englischer Sprache.
     \acro{SAI}{Shadow AI}
     \acro{SIT}{Shadow IT}
     \acro{SLR}{Structured Literature Review}
+    \acro{XAI}{Explainable Artificial Intelligence}
 \end{acronym}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,7 +215,7 @@ In order to establish a comprehensive understanding of \ac{SIT} and its further,
 
 \subsubsection{Concept and Definition}
 
-\ac{SIT} is a multifaceted phenomenon encompassing the use, development, or deployment of \ac{IT} artifacts (e.g., software, hardware, or services) outside the formal control, approval, or awareness of the central \ac{IT} function. For instance, \citet[1]{haag2017shadow} describe it as "hardware, software, or services built, introduced, and/or used for the job without explicit approval or even knowledge of the organization," whereas \citet[1]{kopper2016towards} emphasize autonomous deployment within business departments without IT involvement. Other authors similarly highlight the lack of alignment with IT governance (\citealp[4]{kaess2021towards}; \citealp[4]{rakovic2020shadow}).
+\ac{SIT} is a multifaceted phenomenon encompassing the use, development, or deployment of \ac{IT} artifacts (e.g., software, hardware, or services) outside the formal control, approval, or awareness of the central \ac{IT} function. For instance, \citet[1]{haag2017shadow} describe it as "hardware, software, or services built, introduced, and/or used for the job without explicit approval or even knowledge of the organization", whereas \citet[1]{kopper2016towards} emphasize autonomous deployment within business departments without IT involvement. Other authors similarly highlight the lack of alignment with IT governance (\citealp[4]{kaess2021towards}; \citealp[4]{rakovic2020shadow}).
 
 Beyond these operational perspectives, \ac{SIT} can be conceptualized as a structural complement to formal IT, consisting of independently developed and used systems, processes, and practices that are not known, supported, or accepted by the official IT department (\citealp[147]{rakovic2020shadow}). More concise definitions further highlight either the user-driven development outside central IT or the absence of approval and monitoring as defining features (\citealp[4]{rakovic2020shadow}; \citealp[2]{magunduni2018revisiting}).
 
@@ -516,15 +517,85 @@ Finally, the absence of clear policy often acts as a silent enabler. Many employ
 
 \subsection{Organizational Consequences} \label{organizational-consequences}
 
-\subsubsection{Positive Consequences}
+\subsubsection{Shadow IT}
 
 
 
-\subsubsection{Negative Consequences}
+\subsubsection{Shadow AI}
 
+While the adoption of \ac{SAI} is often driven by the pursuit of individual efficiency, its unsanctioned nature introduces a wide array of organizational, technical, and ethical repercussions. The literature indicates that the consequences of these practices extend far beyond simple policy violations, impacting the core security architecture, legal standing, and cultural fabric of contemporary organizations.
 
+The most immediate technical consequence of \ac{SAI} is the introduction of systemic vulnerabilities that fundamentally challenge traditional cybersecurity models \citep[1]{ross2025shadowai}. By bypassing formal vetting processes, these tools significantly expand the attack surface available to cybercriminals, making their presence a critical concern for security professionals \citep[5]{balogun2025ethical}.
+
+Specific technical risks identified in the literature include:
+
+\begin{itemize}
+  \item \textbf{Adversarial Exploitation:} There is a growing risk of "shadow backdoor models" being engineered specifically to facilitate adversarial attacks against the organization \citep[1]{puthal2025shadowai}.
+  \item \textbf{Operational Disruptions:} The proliferation of unsanctioned systems poses risks that range from data breaches to significant operational disruptions \citep[1]{whitford2025aidriven}.
+  \item \textbf{Infrastructure Fragility:} Because these tools are not integrated into official monitoring systems, they create "blind spots" that undermine the overall resilience of the corporate IT environment \citep[1]{ross2025shadowai}.
+\end{itemize}
+
+\ac{SAI} usage frequently results in the erosion of data privacy and the violation of complex regulatory frameworks. A primary concern is "data leakage", where sensitive business information is inadvertently shared with unauthorized recipients through third-party AI models (\citealp[1]{puthal2025shadowai}; \citealp[1]{raizada2026shadowai}).
+
+The consequences for data sovereignty are particularly severe:
+
+\begin{itemize}
+  \item \textbf{Legal Violations:} Unauthorized AI usage often breaks data residency and sovereignty laws, as sensitive information is frequently moved to and stored in jurisdictions that do not meet required security standards \citep[2]{puthal2025shadowai}.
+  \item \textbf{Regulatory Non-Compliance:} Unmonitored use of Large Language Models (LLMs) leads to documented "compliance breaches" that can trigger significant legal penalties \citep[1]{raizada2026shadowai}.
+  \item \textbf{Knowledge Leakage:} Beyond individual data points, there is a broader risk of Organizational Knowledge Leakage (OKL), where proprietary intellectual property and strategic insights are exposed through employee interactions with external AI \citep[1]{chin2025conflicting}.
+\end{itemize}
+
+The social and cultural repercussions of \ac{SAI} are equally significant, often manifesting as a breakdown in institutional trust. The literature highlights that unauthorized use has profound repercussions on team dynamics and the overall trustworthiness of the workplace environment \citep[1]{varshini2025facing}. 
+
+The phenomenon of "Bring Your Own AI" (BYOAI) is noted for creating persistent tensions between the desire for innovation, the necessity of trust, and the requirements of regulatory oversight \citep[1]{anthuvan2025byoai}. This often leads to a "governance drift zone", a state where formal policies exist on paper but lack any real-world traction or influence over employee behavior \citep[1]{silic2025shadow}. This drift creates a disconnect between management and staff, potentially fostering a culture of secrecy rather than collaborative innovation.
+
+A critical consequence in high-risk fields is the emergence of responsibility and accountability gaps. Because many \ac{SAI} systems function as "black boxes", it becomes nearly impossible for organizations to determine exactly how certain decisions were reached (\citealp[4]{balogun2025ethical}; \citealp[1]{silic2025shadow}).
+
+This lack of transparency exposes institutions to significant legal liability, particularly when AI-driven decisions lead to negative outcomes. In these scenarios, the inability to provide a clear audit trail or explanation for an AI's output makes it difficult to assign responsibility, leaving the organization legally vulnerable \citep[4]{balogun2025ethical}.
+
+The consequences of \ac{SAI} are particularly acute in sensitive sectors where the margin for error is minimal:
+
+\begin{itemize}
+  \item \textbf{Healthcare:} The use of unregulated AI diagnostic tools can lead to misdiagnoses, malpractice, and catastrophic breaches of patient confidentiality \citep[2]{balogun2025ethical}.
+  \item \textbf{Finance:} In the financial sector, unregulated AI-driven credit scoring systems have already resulted in discriminatory lending practices, subsequently prompting intense regulatory scrutiny \citep[3]{balogun2025ethical}.
+  \item \textbf{Education:} Within academic environments, unauthorized AI applications contribute to academic dishonesty, flawed grading mechanisms, and the violation of student privacy rights \citep[2]{balogun2025ethical}.
+\end{itemize}
+
+Finally, there is a broader societal consequence: the unchecked expansion of \ac{SAI} risks entrenching systemic biases. If left unmanaged, these tools may further marginalize vulnerable populations by automating and scaling discriminatory logic that has not been subjected to ethical review \citep[3]{balogun2025ethical}. In addition to bias, organizations must contend with "model hallucination", where AI produces confident but entirely false information, leading to flawed outputs and compromised decision-making \citep[1]{raizada2026shadowai}.
 
 \subsection{Governance Approaches and Countermeasures} \label{governance-approaches-and-countermeasures}
+
+\subsubsection{Shadow IT}
+
+\subsubsection{Shadow AI}
+
+As organizations recognize that total prohibition of \ac{SAI} is often impractical and counterproductive, the literature has shifted toward a more nuanced spectrum of countermeasures. These range from high-level strategic frameworks to granular technical monitoring, all aimed at transitioning from a state of "shadow" usage to a sanctioned, transparent environment.
+
+The first line of defense against the risks of \ac{SAI} involves technical visibility. Organizations are increasingly evaluating the effectiveness of automated monitoring and anomaly detection to identify unsanctioned \ac{AI} traffic \citep[1]{whitford2025aidriven}. Effective risk management requires the integration of "AI-aware" safeguards, specifically Data Loss Prevention (DLP) tools, content filtering, and dedicated \ac{AI} traffic monitoring \citep[2]{puthal2025shadowai}.
+
+A fundamental technical countermeasure is the implementation of automated \ac{AI} discovery and inventory systems \citep[1]{puthal2025shadowai}. These systems allow IT departments to maintain a clear record of which tools are being accessed, which is a prerequisite for applying any advanced governance policy. By providing a real-time overview of the organization's \ac{AI} footprint, these tools help eliminate the "blind spots" traditionally associated with shadow systems.
+
+Beyond simple monitoring, the literature proposes structural changes to how \ac{AI} assets are handled within the corporate network. One of the most advanced technical approaches is the adoption of a Zero Trust Architecture \citep[1]{puthal2025shadowai}. Under this model, every \ac{AI} asset—regardless of whether it is internal or a third-party application—is treated as a potential threat. This requires constant validation and rigorous access control for every single interaction \citep[1]{puthal2025shadowai}.
+
+Furthermore, the "black box" nature of many \ac{SAI} tools is addressed through the promotion of \ac{XAI}. \ac{XAI} serves as a critical countermeasure by making \ac{AI} decision-making processes interpretable for human supervisors \citep[7]{balogun2025ethical}. This transparency allows organizations to identify and rectify biases or errors in \ac{AI} outputs before they result in operational or legal harm \citep[7]{balogun2025ethical}.
+
+The literature emphasizes that technical tools must be embedded within broader strategic governance frameworks. For instance, the \textbf{BYOAI-GOVT} framework offers a behavior-aware model that categorizes tasks into "risk zones": \textit{Enable}, \textit{Regulate}, and \textit{Restrict} \citep[1]{anthuvan2025byoai}. This framework allows for a tiered response to \ac{AI} usage based on a four-level maturity scale, moving away from binary "yes/no" policies \citep[1]{anthuvan2025byoai}.
+
+Other researchers suggest that a successful governance structure must include:
+
+\begin{itemize}
+  \item \textbf{Risk Classification:} Developing a typology of \ac{SAI} use cases to understand and rank specific threats \citep[1]{ross2025shadowai}.
+  \item \textbf{Organizational Bodies:} Establishing \ac{AI} ethics boards and dedicated compliance units to oversee implementation \citep[3]{balogun2025ethical}.
+  \item \textbf{Continuous Auditing:} Implementing regular \ac{AI} compliance audits and risk assessments to identify emerging vulnerabilities \citep[7]{balogun2025ethical}.
+\end{itemize}
+
+Because \ac{SAI} is fundamentally a human behavior, several countermeasures focus on education and culture. Employee training programs are deemed essential for raising awareness about the dangers of unauthorized \ac{AI} and reinforcing cybersecurity policies \citep[6]{balogun2025ethical}. In academic and research settings, this extends to "\ac{AI} literacy programs" designed to ensure that the use of generative tools does not compromise academic integrity \citep[6]{balogun2025ethical}.
+
+However, education alone is insufficient if it is not supported by the organizational culture. A digital organizational culture plays a vital "positive moderating role," helping to align individual \ac{AI} skills with authorized organizational innovation \citep[1]{an2024impact}. Management must address cultural challenges, such as employee resistance to change and deep-seated ethical concerns, to ensure that new governance policies are actually followed rather than circumvented \citep[1]{murire2024artificial}.
+
+Finally, internal governance is increasingly being dictated by external regulatory requirements. The literature points to the \textbf{European Union’s Artificial Intelligence Act} as a primary driver for compliance, as it categorizes \ac{AI} applications by risk level and imposes strict legal obligations on organizations \citep[7]{balogun2025ethical}. Adhering to established standards, such as those provided by the National Institute of Standards and Technology (NIST), is recommended as a best practice for conducting thorough risk assessments \citep[7]{balogun2025ethical}.
+
+Furthermore, there is a call for regulatory agencies to take a more active role by strengthening oversight and imposing stricter penalties for the unauthorized use of \ac{AI}, particularly in high-stakes industries \citep[3]{balogun2025ethical}. By combining legal pressure with internal auditing, organizations can create a more robust environment where the benefits of AI are realized without the risks of shadow implementation.
 
 \section{Conceptual Development: Extending Shadow IT to Shadow AI - 4-5 pages} \label{conceptual-development}
 
