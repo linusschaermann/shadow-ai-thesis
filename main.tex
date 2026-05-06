@@ -320,7 +320,7 @@ Study synthesization involves aggregating, summarizing, and interpreting the fin
 
 \subsection{Writing the Review} \label{writing-the-review}
 
-The final phase of the review process presents the results in detail, so future reviewers can understand and reproduce the process and the findings \citep[901]{okoli2015guide}. Section~\ref{slr-results} presents the results of the \ac{SLR}, organized around the key themes of identified literature, motivational factors, organizational consequences, and governance approaches of \ac{SIT} and \ac{SAI} to summarize existing literature and knowledge about these concepts.
+The final phase of the review process presents the results in detail, so future reviewers can understand and reproduce the process and the findings \citep[901]{okoli2015guide}. To further enhance transparency and reproducibility, a detailed explanation of how and at which stages \ac{AI} tools were used in the preparation of this thesis is provided in Appendix~\ref{appendix-a}. Section~\ref{slr-results} presents the results of the \ac{SLR}, organized around the key themes of identified literature, motivational factors, organizational consequences, and governance approaches of \ac{SIT} and \ac{SAI} to summarize existing literature and knowledge about these concepts.
 
 \section{Structured Literature Review Results} \label{slr-results}
 
@@ -393,7 +393,7 @@ Figure~\ref{fig:shadow_it_ai_combined} illustrates the temporal distribution of 
     ylabel={Publications},
     ymin=0,
     grid=major,
-    xtick={2012,2014,...,2026}, % reduce tick density
+    xtick={2012,2014,...,2026},
     xticklabel style={rotate=45, anchor=east, font=\scriptsize},
     label style={font=\small},
     tick label style={font=\scriptsize},
@@ -676,7 +676,28 @@ Viewed in broader perspective, this thesis reflects a pattern that is common and
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \appendix
-\section{Appendix A} % Bei englischsprachiger Arbeit anzupassen auf: Appendix A
+\section{Appendix A} \label{appendix-a} % Bei englischsprachiger Arbeit anzupassen auf: Appendix A
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{0.15\linewidth}|p{0.10\linewidth}|p{0.15\linewidth}|p{0.30\linewidth}|p{0.30\linewidth}|}
+\hline
+\textbf{Part of the Work} & \textbf{AI Tool Used} & \textbf{Type of Use} & \textbf{Description of Use} & \textbf{Critically Reviewed?} \\
+\hline
+Research Questions (Section 3.2) & ChatGPT 5.3 & Revision & Suggested improvements in wording, clarity, and structure of research questions to enhance precision and alignment with research objectives. & Yes - questions and sub-questions developed independently.\\
+\hline
+Search Strings (Section 3.3) & ChatGPT 5.3 & Iterative Optimization & Assisted in refining and expanding search strings through synonym suggestions and Boolean structuring to improve coverage and accuracy of literature search & Yes -  final strings were tested, evaluated and reasoned. \\
+\hline
+Grouping of Findings (Section 3-4) & Gemini 3 Thinking & Conceptual Structuring & Assistance in clustering similar related concepts based on all extracted citations & Yes - all relevant text passages were extracted independently. \\
+\hline
+Visualizations (Section 3-4) & ChatGPT 5.3 & Visualization support & Provided support for generating and formatting LaTeX code for tables and figures to ensure correct syntax and presentation & Yes - content of visuals was implemented and verified independently. \\
+\hline
+Discussion (Section 7) & Claude Sonnet 4.6 & Consistency Check & Reviewed arguments for logical consistency and alignment with research questions & Yes - arguments based on own analysis \\
+\hline
+\end{tabular}
+\caption{Disclosure of AI Use in Preparation of Thesis}
+\label{tab:aiuse}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Versicherung zur Leistungserbringung 
